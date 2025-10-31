@@ -7,7 +7,7 @@
 </div>
 
 <h1 align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&size=32&pause=1000&color=8A2BE2&center=true&vCenter=true&width=700&lines=Hey%2C+I'm+Deepak!+👋;Designer+%7C+Visual+Artist+%7C+Motion+Maker;Crafting+Neon+Dreams+in+Pixels+✨" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&size=32&pause=1000&color=8A2BE2&center=true&vCenter=true&width=700&lines=Hey%2C+I'm+Deepak!+👋;Designer+%7C+Visual+Artist+%7C+Motion+Artist;Crafting+Neon+Dreams+in+Pixels+✨" alt="Typing SVG" />
 </h1>
 
 <div align="center">
@@ -17,10 +17,8 @@
 ---
 
 ### 💫 About Me
-🎨 Designer passionate about blending **visual art** and **motion**  
-
-⚡ I craft visuals using **Photoshop**, **After Effects**, and **Illustrator**.  
-
+🎨 Designer passionate about blending **visual art** and **motion**.  
+⚡ I craft visuals using **Photoshop**, **After Effects**, **Illustrator**, **Figma**, and **Blender**.  
 💡 Always exploring new ways to make pixels glow in style.
 
 ---
@@ -28,7 +26,7 @@
 ### 🛠️ Tools & Tech
 
 <div align="center">
-  <img src="https://skillicons.dev/icons?i=photoshop,aftereffects,figma,blender" height="80" style="margin: 10px;" />
+  <img src="https://skillicons.dev/icons?i=ps,ae,ai,figma,blender" height="80" style="margin: 10px;" />
   <br/>
   <img src="https://raw.githubusercontent.com/skittlegit/skittlegit/output/github-contribution-grid-snake.svg" width="100%" />
 </div>
@@ -42,32 +40,20 @@
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=skittlegit&theme=tokyonight&hide_border=true&ring=8A2BE2&fire=8A2BE2&currStreakLabel=00FFFF" height="180px" />
 </div>
 
----
-
-### 🎮 Visual Candy
-
-<div align="center">
-
-<!-- 🌌 STARFIELD BACKGROUND -->
-<img src="https://i.pinimg.com/originals/30/12/f1/3012f1e50d3f35dd5de3b7d0f252d1d7.gif" width="100%" alt="Starfield Animation" />
-
-<!-- 💻 RETRO TERMINAL -->
-<img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExb2JvNGZkZ25pYmVsa2M3Njk1YWZmcWc3ZGdmcWg4MmM0dmJhb3A0diZlcD12MV9naWZzX3NlYXJjaCZjdD1n/f3CtEsJ72j86DIumaJ/giphy.gif" width="600px" alt="Retro Terminal Animation"/>
-
-<!-- 🕹️ PIXEL ARCADE PREVIEW -->
-<img src="https://i.pinimg.com/originals/19/ed/61/19ed61c87a4933b6f7a1d32b2514de4d.gif" width="500px" alt="Pixel Arcade Game Preview"/>
-
-<!-- 🌐 NEON GRID BACKGROUND -->
-<img src="https://i.pinimg.com/originals/54/8f/fc/548ffc2db27f1ed0ff9ac2c1bb4dd79d.gif" width="100%" alt="Neon Grid Background"/>
-
-<!-- 🚀 FLOATING PIXEL SPACESHIP -->
-<img src="https://i.pinimg.com/originals/7f/2d/ed/7f2ded245b53b594a6dd6b4a7b67d05f.gif" width="300px" alt="Pixel Spaceship Floating"/>
-
-</div>
+<table>
+  <tr>
+    <td width="50%" align="center">
+      <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExb2JvNGZkZ25pYmVsa2M3Njk1YWZmcWc3ZGdmcWg4MmM0dmJhb3A0diZlcD12MV9naWZzX3NlYXJjaCZjdD1n/f3CtEsJ72j86DIumaJ/giphy.gif" alt="Retro Terminal Animation"/>
+    </td>
+    <td width="50%" align="center">
+      <img src="https://i.pinimg.com/originals/19/ed/61/19ed61c87a4933b6f7a1d32b2514de4d.gif" alt="Pixel Arcade Game Preview"/>
+    </td>
+  </tr>
+</table>
 
 ---
 
-### 🤖 Let’s Connect
+### 💜 Let’s Connect
 
 <div align="center">
   <a href="https://www.instagram.com/skittlllle/">
@@ -83,5 +69,3 @@
   <img src="https://i.gifer.com/1amw.gif" width="80" /><br/>
   _"Design is intelligence made visible.”_
 </div>
-
----
