@@ -42,7 +42,7 @@
 
 ---
 
-### 💜 Let’s Connect
+### 🤖 Let’s Connect
 
 <div align="center">
   <a href="https://www.instagram.com/skittlllle/">
