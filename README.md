@@ -25,30 +25,6 @@
 
 ---
 
-### 🧠 Retro Terminal Command
-
-<div align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&duration=3000&pause=800&color=00FFFF&center=true&vCenter=true&width=500&lines=Initializing+Neon+System...;Loading+Design+Modules...;Activating+Cyberpunk+Interface...;System+Online+✅" alt="Terminal Typing Animation" />
-</div>
-
----
-
-### 🕹️ Pixel Arcade Preview
-
-<div align="center">
-  <img src="https://i.pinimg.com/originals/07/9a/21/079a21c3cc2a0c97e8a9f1f8cde55218.gif" width="600px" alt="Retro Arcade Animation" />
-</div>
-
----
-
-### 🌌 Starfield Background
-
-<div align="center">
-  <img src="https://i.gifer.com/7VE.gif" width="100%" alt="Cyber Starfield Animation" />
-</div>
-
----
-
 ### 🛠️ Tools & Tech
 
 <div align="center">
@@ -64,6 +40,29 @@
 <div align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=skittlegit&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=8A2BE2&icon_color=00FFFF" height="180px" />
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=skittlegit&theme=tokyonight&hide_border=true&ring=8A2BE2&fire=8A2BE2&currStreakLabel=00FFFF" height="180px" />
+</div>
+
+---
+
+### 🎮 Visual Candy
+
+<div align="center">
+
+<!-- 🌌 STARFIELD BACKGROUND -->
+<img src="https://i.pinimg.com/originals/30/12/f1/3012f1e50d3f35dd5de3b7d0f252d1d7.gif" width="100%" alt="Starfield Animation" />
+
+<!-- 💻 RETRO TERMINAL -->
+<img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExb2JvNGZkZ25pYmVsa2M3Njk1YWZmcWc3ZGdmcWg4MmM0dmJhb3A0diZlcD12MV9naWZzX3NlYXJjaCZjdD1n/f3CtEsJ72j86DIumaJ/giphy.gif" width="600px" alt="Retro Terminal Animation"/>
+
+<!-- 🕹️ PIXEL ARCADE PREVIEW -->
+<img src="https://i.pinimg.com/originals/19/ed/61/19ed61c87a4933b6f7a1d32b2514de4d.gif" width="500px" alt="Pixel Arcade Game Preview"/>
+
+<!-- 🌐 NEON GRID BACKGROUND -->
+<img src="https://i.pinimg.com/originals/54/8f/fc/548ffc2db27f1ed0ff9ac2c1bb4dd79d.gif" width="100%" alt="Neon Grid Background"/>
+
+<!-- 🚀 FLOATING PIXEL SPACESHIP -->
+<img src="https://i.pinimg.com/originals/7f/2d/ed/7f2ded245b53b594a6dd6b4a7b67d05f.gif" width="300px" alt="Pixel Spaceship Floating"/>
+
 </div>
 
 ---
@@ -84,3 +83,5 @@
   <img src="https://i.gifer.com/1amw.gif" width="80" /><br/>
   _"Design is intelligence made visible.”_
 </div>
+
+---
