@@ -1,7 +1,9 @@
-name: generate-snake-game-from-github-contribution-grid
+name: Generate Snake Animation
+
 on:
   schedule:
-    - cron: "0 0 * * *" # runs daily
+    # Runs at 12am UTC every day
+    - cron: "0 0 * * *"
   workflow_dispatch:
   push:
     branches:
@@ -11,16 +13,23 @@ jobs:
   build:
     name: Generate Snake
     runs-on: ubuntu-latest
+    permissions:
+      # This is the key change: grant write permissions to the GITHUB_TOKEN
+      contents: write
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Generate snake animation
-        uses: Platane/snk@v3.3.0
+        uses: Platane/snk@v3
         with:
-          github_user_name: skittlegit
-          outputs: dist/github-contribution-grid-snake.svg
+          # Use the GITHUB_REPOSITORY_OWNER environment variable to make it portable
+          github_user_name: ${{ github.repository_owner }}
+          # Generate both a light and dark version of the snake SVG
+          outputs: |
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
 
       - name: Push generated snake to output branch
         uses: crazy-max/ghaction-github-pages@v4
