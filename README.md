@@ -26,7 +26,7 @@
 ### 🛠️ Tools & Tech
 
 <div align="center">
-  <img src="https://skillicons.dev/icons?i=ps,ae,ai,figma,blender" height="80" style="margin: 10px;" />
+  <img src="https://skillicons.dev/icons?i=ps,ae,ai,pr,blender" height="80" style="margin: 10px;" />
   <br/>
   <img src="https://raw.githubusercontent.com/skittlegit/skittlegit/output/github-contribution-grid-snake.svg" width="100%" />
 </div>
