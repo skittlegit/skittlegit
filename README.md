@@ -7,7 +7,7 @@
 </div>
 
 <h1 align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Orbitron&size=32&pause=1000&color=8A2BE2&center=true&vCenter=true&width=700&lines=Hey%2C+I'm+Deepak!+👋;Designer+%7C+Visual+Artist+%7C+Motion+Lover;Crafting+Neon+Dreams+in+Pixels+✨" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&size=32&pause=1000&color=8A2BE2&center=true&vCenter=true&width=700&lines=Hey%2C+I'm+Deepak!+👋;Designer+%7C+Visual+Artist+%7C+Motion+Lover;Crafting+Neon+Dreams+in+Pixels+✨" alt="Typing SVG" />
 </h1>
 
 <div align="center">
@@ -57,10 +57,4 @@
   <br/>
   <img src="https://i.gifer.com/1amw.gif" width="80" /><br/>
   _"Design is intelligence made visible.”_
-</div>
-
----
-
-<div align="center">
-  <img src="https://raw.githubusercontent.com/skittlegit/skittlegit/output/github-contribution-grid-snake.svg" />
 </div>
