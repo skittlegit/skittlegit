@@ -7,7 +7,7 @@
 </div>
 
 <h1 align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&size=32&pause=1000&color=8A2BE2&center=true&vCenter=true&width=700&lines=Hey%2C+I'm+Deepak!+👋;Designer+%7C+Visual+Artist+%7C+Motion+Maker;Crafting+Neon+Dreams+in+Pixels+✨" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&size=32&pause=1000&color=8A2BE2&center=true&vCenter=true&width=700&lines=Hey%2C+I'm+Deepak!+👋;Designer+%7C+Visual+Artist+%7C+Motion+Lover;Crafting+Neon+Dreams+in+Pixels+✨" alt="Typing SVG" />
 </h1>
 
 <div align="center">
@@ -17,10 +17,8 @@
 ---
 
 ### 💫 About Me
-🎨 Designer passionate about blending **visual art** and **motion** 
-
-⚡ I craft visuals using **Photoshop**, **After Effects**, and **Illustrator**.  
-
+🎨 Designer passionate about blending **visual art**, **motion**, and **cyberpunk aesthetics**.  
+⚡ I craft visuals using the **Adobe Creative Suite**, including **Photoshop**, **After Effects**, **Illustrator**, and **Premiere Pro**.  
 💡 Always exploring new ways to make pixels glow in style.
 
 ---
@@ -28,7 +26,7 @@
 ### 🛠️ Tools & Tech
 
 <div align="center">
-  <img src="https://skillicons.dev/icons?i=photoshop,aftereffects,figma,blender" height="80" style="margin: 10px;" />
+  <img src="https://skillicons.dev/icons?i=ps,ae,ai,pr,figma,blender" height="80" style="margin: 10px;" />
   <br/>
   <img src="https://raw.githubusercontent.com/skittlegit/skittlegit/output/github-contribution-grid-snake.svg" width="100%" />
 </div>
@@ -44,7 +42,7 @@
 
 ---
 
-### 🤖 Let’s Connect
+### 💜 Let’s Connect
 
 <div align="center">
   <a href="https://www.instagram.com/skittlllle/">
