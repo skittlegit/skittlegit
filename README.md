@@ -2,6 +2,10 @@
 <!-- Made with 💙 by Deepak / skittlegit -->
 
 <div align="center">
+  <img src="https://raw.githubusercontent.com/skittlegit/skittlegit/main/neon_banner.png" width="100%" alt="Deepak Neon Banner"/>
+</div>
+
+<div align="center">
   <img src="https://i.ibb.co/Z1Gnx1C/neon-divider.gif" width="100%" />
 </div>
 
