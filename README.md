@@ -1,16 +1,79 @@
-## Hi there 👋
+<!-- ⚡ Cyberpunk Neon GitHub Profile README -->
+<!-- Made with 💙 by Deepak / skittlegit -->
 
-<!--
-**skittlegit/skittlegit** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+<div align="center">
+  <img src="https://i.ibb.co/Z1Gnx1C/neon-divider.gif" width="100%" />
+</div>
 
-Here are some ideas to get you started:
+<h1 align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Orbitron&size=32&pause=1000&color=8A2BE2&center=true&vCenter=true&width=700&lines=Hey%2C+I'm+Deepak!+👋;Designer+%7C+Visual+Artist+%7C+Motion+Lover;Crafting+Neon+Dreams+in+Pixels+✨" alt="Typing SVG" />
+</h1>
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+<div align="center">
+  <img src="https://i.pinimg.com/originals/d2/f2/f0/d2f2f04b8ad3d29f3173d6a6d8c290de.gif" width="300px" />
+</div>
+
+---
+
+### 💫 About Me
+🎨 Designer passionate about blending **visual art**, **motion**, and **cyberpunk aesthetics**.  
+⚡ I craft visuals using **Photoshop**, **After Effects**, and **Affinity Suite**.  
+💡 Always exploring new ways to make pixels glow in style.
+
+---
+
+### 🛠️ Tools & Tech
+
+<div align="center">
+  <img src="https://skillicons.dev/icons?i=photoshop,aftereffects,figma,blender" height="80" style="margin: 10px;" />
+  <br/>
+  <img src="https://github.com/skittlegit/skittlegit/blob/output/github-contribution-grid-snake.svg" width="100%" />
+</div>
+
+---
+
+### ⚙️ GitHub Stats
+
+<div align="center">
+
+  <img src="https://github-readme-stats.vercel.app/api?username=skittlegit&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=8A2BE2&icon_color=00FFFF" height="180px" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=skittlegit&theme=tokyonight&hide_border=true&ring=8A2BE2&fire=8A2BE2&currStreakLabel=00FFFF" height="180px" />
+  
+</div>
+
+---
+
+### 💜 Let’s Connect
+
+<div align="center">
+  <a href="https://www.instagram.com/skittlllle/">
+    <img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white" />
+  </a>
+</div>
+
+---
+
+<div align="center">
+  <img src="https://i.ibb.co/Z1Gnx1C/neon-divider.gif" width="100%" />
+  <br/>
+  <img src="https://i.gifer.com/1amw.gif" width="80" /><br/>
+  <i>“Design is intelligence made visible.”</i>
+</div>
+
+---
+
+<div align="center">
+  <img src="https://github.com/skittlegit/skittlegit/blob/output/github-contribution-grid-snake.svg" />
+</div>
+
+<!-- Optional neon animation pulse -->
+<style>
+  body {
+    background: radial-gradient(circle at center, #0a0a0a 0%, #000010 100%);
+    animation: neonPulse 6s infinite alternate;
+  }
+  @keyframes neonPulse {
+    0% { box-shadow: 0 0 5px #8A2BE2, 0 0 10px #00FFFF; }
+    100% { box-shadow: 0 0 20px #8A2BE2, 0 0 30px #00FFFF; }
+  }
+</style>
