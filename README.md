@@ -43,10 +43,10 @@
 <table>
   <tr>
     <td width="50%" align="center">
-      <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExb2JvNGZkZ25pYmVsa2M3Njk1YWZmcWc3ZGdmcWg4MmM0dmJhb3A0diZlcD12MV9naWZzX3NlYXJjaCZjdD1n/f3CtEsJ72j86DIumaJ/giphy.gif" alt="Retro Terminal Animation"/>
+      <img src="https://i.gifer.com/74H.gif" alt="Hacker Terminal Animation"/>
     </td>
     <td width="50%" align="center">
-      <img src="https://i.pinimg.com/originals/19/ed/61/19ed61c87a4933b6f7a1d32b2514de4d.gif" alt="Pixel Arcade Game Preview"/>
+      <img src="https://i.pinimg.com/originals/bc/5a/01/bc5a01a61c6b54b6f1f945b3488b39a3.gif" alt="Pixel Art Cyberpunk Car"/>
     </td>
   </tr>
 </table>
