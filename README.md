@@ -18,7 +18,7 @@
 
 ### 💫 About Me
 🎨 Designer passionate about blending **visual art** and **motion**.  
-⚡ I craft visuals using **Photoshop**, **After Effects**, **Illustrator**, **Figma**, and **Blender**.  
+⚡ I craft visuals using **Photoshop**, **After Effects**, **Illustrator**, **Premier Pro**, and **Blender**.  
 💡 Always exploring new ways to make pixels glow in style.
 
 ---
