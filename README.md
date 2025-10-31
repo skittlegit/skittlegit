@@ -28,7 +28,7 @@
 <div align="center">
   <img src="https://skillicons.dev/icons?i=photoshop,aftereffects,figma,blender" height="80" style="margin: 10px;" />
   <br/>
-  <img src="https://github.com/skittlegit/skittlegit/blob/output/github-contribution-grid-snake.svg" width="100%" />
+  <img src="https://raw.githubusercontent.com/skittlegit/skittlegit/output/github-contribution-grid-snake.svg" width="100%" />
 </div>
 
 ---
@@ -62,5 +62,5 @@
 ---
 
 <div align="center">
-  <img src="https://github.com/skittlegit/skittlegit/blob/output/github-contribution-grid-snake.svg" />
+  <img src="https://raw.githubusercontent.com/skittlegit/skittlegit/output/github-contribution-grid-snake.svg" />
 </div>
