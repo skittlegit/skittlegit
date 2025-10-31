@@ -36,10 +36,8 @@
 ### ⚙️ GitHub Stats
 
 <div align="center">
-
   <img src="https://github-readme-stats.vercel.app/api?username=skittlegit&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=8A2BE2&icon_color=00FFFF" height="180px" />
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=skittlegit&theme=tokyonight&hide_border=true&ring=8A2BE2&fire=8A2BE2&currStreakLabel=00FFFF" height="180px" />
-  
 </div>
 
 ---
@@ -58,7 +56,7 @@
   <img src="https://i.ibb.co/Z1Gnx1C/neon-divider.gif" width="100%" />
   <br/>
   <img src="https://i.gifer.com/1amw.gif" width="80" /><br/>
-  <i>“Design is intelligence made visible.”</i>
+  _"Design is intelligence made visible.”_
 </div>
 
 ---
@@ -66,14 +64,3 @@
 <div align="center">
   <img src="https://github.com/skittlegit/skittlegit/blob/output/github-contribution-grid-snake.svg" />
 </div>
-
-<style>
-  body {
-    background: radial-gradient(circle at center, #0a0a0a 0%, #000010 100%);
-    animation: neonPulse 6s infinite alternate;
-  }
-  @keyframes neonPulse {
-    0% { box-shadow: 0 0 5px #8A2BE2, 0 0 10px #00FFFF; }
-    100% { box-shadow: 0 0 20px #8A2BE2, 0 0 30px #00FFFF; }
-  }
-</style>
