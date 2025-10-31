@@ -1,8 +1,5 @@
-<!-- ⚡ Cyberpunk Neon GitHub Profile README -->
-<!-- Made with 💙 by Deepak / skittlegit -->
-
 <div align="center">
-  <img src="https://raw.githubusercontent.com/skittlegit/skittlegit/main/neon_banner.png" width="100%" alt="Deepak Neon Banner"/>
+  <img src="https://i.gifer.com/origin/b8/b85c5c68991d31d20f125a7a71a065d2_w200.gif" width="100%" alt="Deepak Neon Banner"/>
 </div>
 
 <div align="center">
@@ -70,7 +67,6 @@
   <img src="https://github.com/skittlegit/skittlegit/blob/output/github-contribution-grid-snake.svg" />
 </div>
 
-<!-- Optional neon animation pulse -->
 <style>
   body {
     background: radial-gradient(circle at center, #0a0a0a 0%, #000010 100%);
