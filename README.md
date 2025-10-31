@@ -17,8 +17,8 @@
 ---
 
 ### 💫 About Me
-🎨 Designer passionate about blending **visual art**, **motion**, and **cyberpunk aesthetics**.  
-⚡ I craft visuals using **Photoshop**, **After Effects**, and **Affinity Suite**.  
+🎨 Designer passionate about blending **visual art** and **motion** 
+⚡ I craft visuals using **Photoshop**, **After Effects**, and **Illustrator**.  
 💡 Always exploring new ways to make pixels glow in style.
 
 ---
