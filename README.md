@@ -40,16 +40,9 @@
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=skittlegit&theme=tokyonight&hide_border=true&ring=8A2BE2&fire=8A2BE2&currStreakLabel=00FFFF" height="180px" />
 </div>
 
-<table>
-  <tr>
-    <td width="50%" align="center">
-      <img src="https://i.gifer.com/74H.gif" alt="Hacker Terminal Animation"/>
-    </td>
-    <td width="50%" align="center">
-      <img src="https://i.pinimg.com/originals/bc/5a/01/bc5a01a61c6b54b6f1f945b3488b39a3.gif" alt="Pixel Art Cyberpunk Car"/>
-    </td>
-  </tr>
-</table>
+<div align="center">
+  <img src="https://i.gifer.com/origin/33/332b67f7248e3a846c483ac8a58a7541_w200.gif" width="100%" alt="Retro Terminal Animation"/>
+</div>
 
 ---
 
