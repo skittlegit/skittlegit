@@ -1,15 +1,15 @@
-<svg width="850" height="580" xmlns="http://www.w3.org/2000/svg">
+<svg width="820" height="560" xmlns="http://www.w3.org/2000/svg">
   <rect width="100%" height="100%" fill="#0D1117" rx="10"/>
   <style>
-    .ascii { fill: #C9D1D9; font-family: monospace; font-size: 13px; white-space: pre; }
-    .key { fill: #F0883E; font-family: monospace; font-size: 13px; font-weight: bold; }
-    .val { fill: #A5D6FF; font-family: monospace; font-size: 13px; }
-    .head { fill: #8B949E; font-family: monospace; font-size: 13px; }
-    .plus { fill: #3FB950; font-family: monospace; font-size: 13px; }
-    .minus { fill: #F85149; font-family: monospace; font-size: 13px; }
+    .ascii { fill: #C9D1D9; font-family: 'Courier New', monospace; font-size: 13px; white-space: pre; }
+    .key { fill: #F0883E; font-family: 'Courier New', monospace; font-size: 13px; font-weight: bold; }
+    .val { fill: #A5D6FF; font-family: 'Courier New', monospace; font-size: 13px; }
+    .head { fill: #8B949E; font-family: 'Courier New', monospace; font-size: 13px; }
+    .plus { fill: #3FB950; font-family: 'Courier New', monospace; font-size: 13px; }
+    .minus { fill: #F85149; font-family: 'Courier New', monospace; font-size: 13px; }
   </style>
 
-  <text x="20" y="40" class="ascii">
+  <text x="20" y="30" class="ascii">
     <tspan x="20" dy="1.2em">           .  .        _       .        </tspan>
     <tspan x="20" dy="1.2em">        .       .     /       .         </tspan>
     <tspan x="20" dy="1.2em">     .       .     .       .      .     </tspan>
@@ -32,34 +32,30 @@
     <tspan x="20" dy="1.2em"> |   |..  :.:::'~@@@@@@@~'::::.::|::| : </tspan>
     <tspan x="20" dy="1.2em">:|   |::|||||::::..    ..::::|::||   |||</tspan>
     <tspan x="20" dy="1.2em">:|   |::|||||::::..    ..::::|::||   |||</tspan>
-    <tspan x="20" dy="1.2em">:|   |::|||||::::..    ..::::|::||   |||</tspan>
-    <tspan x="20" dy="1.2em">:|   |::|||||::::..    ..::::|::||   |||</tspan>
-    <tspan x="20" dy="1.2em">:|   |::|||||::::..    ..::::|::||   |||</tspan>
-    <tspan x="20" dy="1.2em">:|   |::|||||::::..    ..::::|::||   |||</tspan>
   </text>
 
-  <text x="320" y="55" class="head">deepak@github ------------------------------------------------</text>
-  <text x="320" y="80" class="key">OS:.......................................<tspan class="val">Windows 11, iOS 26, Linux</tspan></text>
-  <text x="320" y="100" class="key">Uptime:..........................................<tspan class="val">20 years, 6 months</tspan></text>
-  <text x="320" y="120" class="key">Host:...........................................<tspan class="val">Mahindra University</tspan></text>
-  <text x="320" y="140" class="key">Kernel:...........................<tspan class="val">BTech AI (Class of 2027)</tspan></text>
-  <text x="320" y="160" class="key">IDE:................................................<tspan class="val">VSCode, Cursor</tspan></text>
+  <text x="340" y="45" class="head">deepak@github ---------------------------------------</text>
+  <text x="340" y="70" class="key">OS:<tspan x="490" class="val">. . . . . . . Windows 11, iOS 26, Linux</tspan></text>
+  <text x="340" y="90" class="key">Uptime:<tspan x="490" class="val">. . . . . . . . . 20 years, 6 months</tspan></text>
+  <text x="340" y="110" class="key">Host:<tspan x="490" class="val">. . . . . . . . . Mahindra University</tspan></text>
+  <text x="340" y="130" class="key">Kernel:<tspan x="490" class="val">. . . BTech AI (Class of 2027)</tspan></text>
+  <text x="340" y="150" class="key">IDE:<tspan x="490" class="val">. . . . . . . . . . . VSCode, Cursor</tspan></text>
   
-  <text x="320" y="195" class="key">Languages.Programming:.................<tspan class="val">JS, TS, HTML, CSS, C++</tspan></text>
-  <text x="320" y="215" class="key">Languages.Computer:....................<tspan class="val">Next.js, Express, SQL</tspan></text>
-  <text x="320" y="235" class="key">Languages.Real:............................<tspan class="val">English, Hindi, Telugu</tspan></text>
+  <text x="340" y="185" class="key">Languages.Programming:<tspan x="510" class="val">. JS, TS, HTML, CSS, C++</tspan></text>
+  <text x="340" y="205" class="key">Languages.Computer:<tspan x="510" class="val">. . Next.js, Express, SQL</tspan></text>
+  <text x="340" y="225" class="key">Languages.Real:<tspan x="510" class="val">. . . English, Hindi, Telugu</tspan></text>
   
-  <text x="320" y="270" class="key">Hobbies.Software:....................<tspan class="val">Full-stack, Machine Learning</tspan></text>
-  <text x="320" y="290" class="key">Hobbies.Design:..........................<tspan class="val">Photoshop, Illustr, Figma</tspan></text>
-  <text x="320" y="310" class="key">Hobbies.Other:....................................<tspan class="val">Football, Minecraft</tspan></text>
+  <text x="340" y="260" class="key">Hobbies.Software:<tspan x="490" class="val">. . Full-stack, Machine Learning</tspan></text>
+  <text x="340" y="280" class="key">Hobbies.Design:<tspan x="490" class="val">. . . . Photoshop, Illustr, Figma</tspan></text>
+  <text x="340" y="300" class="key">Hobbies.Other:<tspan x="490" class="val">. . . . . . . Football, Minecraft</tspan></text>
 
-  <text x="320" y="345" class="head">- Contact ----------------------------------------------------</text>
-  <text x="320" y="370" class="key">Email.Personal:...............................<tspan class="val">deepakrdy7@gmail.com</tspan></text>
-  <text x="320" y="390" class="key">LinkedIn:.............................................<tspan class="val">deepakaeleni</tspan></text>
-  <text x="320" y="410" class="key">Discord:................................................<tspan class="val">skittlllle</tspan></text>
+  <text x="340" y="335" class="head">- Contact -------------------------------------------</text>
+  <text x="340" y="360" class="key">Email.Personal:<tspan x="490" class="val">. . . . deepakrdy7@gmail.com</tspan></text>
+  <text x="340" y="380" class="key">LinkedIn:<tspan x="490" class="val">. . . . . . . . . . deepakaeleni</tspan></text>
+  <text x="340" y="400" class="key">Discord:<tspan x="490" class="val">. . . . . . . . . . . skittlllle</tspan></text>
 
-  <text x="320" y="445" class="head">- GitHub Stats -----------------------------------------------</text>
-  <text x="320" y="470" class="key">Repos:<tspan x="375" class="val">45</tspan> <tspan x="410" class="key">{Contributed:</tspan><tspan x="515" class="val">23}</tspan> <tspan x="550" class="key">| Stars:</tspan><tspan x="625" class="val">128</tspan></text>
-  <text x="320" y="490" class="key">Commits:........................<tspan class="val">1,024</tspan> <tspan x="500" class="key">| Followers:........</tspan><tspan x="625" class="val">64</tspan></text>
-  <text x="320" y="510" class="key">Lines of Code:..................<tspan class="val">446,276 (<tspan class="plus">523,178++</tspan>, <tspan class="minus">76,902--</tspan>)</tspan></text>
+  <text x="340" y="435" class="head">- GitHub Stats --------------------------------------</text>
+  <text x="340" y="460" class="key">Repos:<tspan x="400" class="val">45</tspan> <tspan x="435" class="key">Contributed:</tspan><tspan x="535" class="val">23</tspan> <tspan x="570" class="key">Stars:</tspan><tspan x="640" class="val">128</tspan></text>
+  <text x="340" y="480" class="key">Commits:<tspan x="460" class="val">1,024</tspan> <tspan x="540" class="key">Followers:</tspan><tspan x="640" class="val">64</tspan></text>
+  <text x="340" y="500" class="key">Lines of Code:<tspan x="460" class="val">446,276 (<tspan class="plus">523,178++</tspan>, <tspan class="minus">76,902--</tspan>)</tspan></text>
 </svg>
