@@ -9,7 +9,7 @@
     .minus { fill: #F85149; font-family: monospace; font-size: 13px; }
   </style>
 
-  <text x="20" y="40" class="ascii">
+  <text x="20" y="55" class="ascii">
     <tspan x="20" dy="1.2em">           .  .        _       .        </tspan>
     <tspan x="20" dy="1.2em">        .       .     /       .         </tspan>
     <tspan x="20" dy="1.2em">     .       .     .       .      .     </tspan>
@@ -30,6 +30,9 @@
     <tspan x="20" dy="1.2em">         '@@@@@@@@@@@@@@@@@@@@@ :   ::: </tspan>
     <tspan x="20" dy="1.2em">           'O@@@@@@@@@@@@@@@@O'   :   :::</tspan>
     <tspan x="20" dy="1.2em"> |   |..  :.:::'~@@@@@@@~'::::.::|::| : </tspan>
+    <tspan x="20" dy="1.2em">:|   |::|||||::::..    ..::::|::||   |||</tspan>
+    <tspan x="20" dy="1.2em">:|   |::|||||::::..    ..::::|::||   |||</tspan>
+    <tspan x="20" dy="1.2em">:|   |::|||||::::..    ..::::|::||   |||</tspan>
     <tspan x="20" dy="1.2em">:|   |::|||||::::..    ..::::|::||   |||</tspan>
     <tspan x="20" dy="1.2em">:|   |::|||||::::..    ..::::|::||   |||</tspan>
     <tspan x="20" dy="1.2em">:|   |::|||||::::..    ..::::|::||   |||</tspan>
