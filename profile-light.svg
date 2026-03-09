@@ -1,69 +1,61 @@
-<svg width="840" height="580" xmlns="http://www.w3.org/2000/svg">
+<svg width="820" height="560" xmlns="http://www.w3.org/2000/svg">
   <rect width="100%" height="100%" fill="#FFFFFF" rx="10"/>
-  
   <style>
-    .ascii-face { fill: #24292F; font-family: monospace; font-size: 14px; white-space: pre; }
-    .key { fill: #E1681E; font-family: monospace; font-size: 14px; }
-    .value { fill: #0059B2; font-family: monospace; font-size: 14px; }
-    .header { fill: #24292F; font-family: monospace; font-size: 14px; }
-    .plus { fill: #22863A; font-family: monospace; font-size: 14px; }
-    .minus { fill: #CB2431; font-family: monospace; font-size: 14px; }
+    .ascii { fill: #24292F; font-family: 'Courier New', monospace; font-size: 13px; white-space: pre; }
+    .key { fill: #D16D00; font-family: 'Courier New', monospace; font-size: 13px; font-weight: bold; }
+    .val { fill: #0059B2; font-family: 'Courier New', monospace; font-size: 13px; }
+    .head { fill: #57606A; font-family: 'Courier New', monospace; font-size: 13px; }
+    .plus { fill: #1A7F37; font-family: 'Courier New', monospace; font-size: 13px; }
+    .minus { fill: #CF222E; font-family: 'Courier New', monospace; font-size: 13px; }
   </style>
 
-  <text x="10" y="20" class="ascii-face">
-    <tspan x="10" dy="1.2em">           .  .        _       .        </tspan>
-    <tspan x="10" dy="1.2em">        .       .     /       .         </tspan>
-    <tspan x="10" dy="1.2em">     .       .     .       .      .     </tspan>
-    <tspan x="10" dy="1.2em">   .       .     .       .              </tspan>
-    <tspan x="10" dy="1.2em">  .      _@@_ .._      .                </tspan>
-    <tspan x="10" dy="1.2em">  .     _@@@@@@@u@O@0O@U@O@@@@\         </tspan>
-    <tspan x="10" dy="1.2em">       |@@^~~~"~~""""^~""~""~@!         </tspan>
-    <tspan x="10" dy="1.2em">  .    _."    .      _..    _.          </tspan>
-    <tspan x="10" dy="1.2em">       .  .       @@'      @@@\ @@@     </tspan>
-    <tspan x="10" dy="1.2em">/@@@^ @@@_ @|____@@@@@|   |@@@@@        </tspan>
-    <tspan x="10" dy="1.2em"> \@@ \@@@@@@@@@@^"""""@@@@@@@^          </tspan>
-    <tspan x="10" dy="1.2em">        ::|        _ _ |@@|::           </tspan>
-    <tspan x="10" dy="1.2em">        ..:@@@____@@@@@:..   _          </tspan>
-    <tspan x="10" dy="1.2em">         . ::::@@@@@@@::::  / )         </tspan>
-    <tspan x="10" dy="1.2em">  . .      . . . . . . . ._/__/         </tspan>
-    <tspan x="10" dy="1.2em">. .      :@O::., .        _@@|          </tspan>
-    <tspan x="10" dy="1.2em">     .   :@@@@@@@@@_@@@@@@@@@@| :       </tspan>
-    <tspan x="10" dy="1.2em">         '@@@@@@@@@@@@@@@@@@@@@ :   ::: </tspan>
-    <tspan x="10" dy="1.2em">           'O@@@@@@@@@@@@@@@@O'   :   :::</tspan>
-    <tspan x="10" dy="1.2em"> |   |..  :.:::'~@@@@@@@~'::::.::|::| : </tspan>
-    <tspan x="10" dy="1.2em">:|   |::|||||::::..    ..::::|::||   |||</tspan>
+  <text x="20" y="30" class="ascii">
+    <tspan x="20" dy="1.2em">           .  .        _       .        </tspan>
+    <tspan x="20" dy="1.2em">        .       .     /       .         </tspan>
+    <tspan x="20" dy="1.2em">     .       .     .       .      .     </tspan>
+    <tspan x="20" dy="1.2em">   .       .     .       .              </tspan>
+    <tspan x="20" dy="1.2em">  .      _@@_ .._      .                </tspan>
+    <tspan x="20" dy="1.2em">  .     _@@@@@@@u@O@0O@U@O@@@@\         </tspan>
+    <tspan x="20" dy="1.2em">       |@@^~~~"~~""""^~""~""~@!         </tspan>
+    <tspan x="20" dy="1.2em">  .    _."    .      _..    _.          </tspan>
+    <tspan x="20" dy="1.2em">       .  .       @@'      @@@\ @@@     </tspan>
+    <tspan x="20" dy="1.2em">/@@@^ @@@_ @|____@@@@@|   |@@@@@        </tspan>
+    <tspan x="20" dy="1.2em"> \@@ \@@@@@@@@@@^"""""@@@@@@@^          </tspan>
+    <tspan x="20" dy="1.2em">        ::|        _ _ |@@|::           </tspan>
+    <tspan x="20" dy="1.2em">        ..:@@@______@@@@@:..   _        </tspan>
+    <tspan x="20" dy="1.2em">         . ::::@@@@@@@::::  / )         </tspan>
+    <tspan x="20" dy="1.2em">  . .      . . . . . . . ._/__/         </tspan>
+    <tspan x="20" dy="1.2em">. .      :@O::., .        _@@|          </tspan>
+    <tspan x="20" dy="1.2em">     .   :@@@@@@@@@_@@@@@@@@@@| :       </tspan>
+    <tspan x="20" dy="1.2em">         '@@@@@@@@@@@@@@@@@@@@@ :   ::: </tspan>
+    <tspan x="20" dy="1.2em">           'O@@@@@@@@@@@@@@@@O'   :   :::</tspan>
+    <tspan x="20" dy="1.2em"> |   |..  :.:::'~@@@@@@@~'::::.::|::| : </tspan>
+    <tspan x="20" dy="1.2em">:|   |::|||||::::..    ..::::|::||   |||</tspan>
+    <tspan x="20" dy="1.2em">:|   |::|||||::::..    ..::::|::||   |||</tspan>
   </text>
 
-  <text x="400" y="20" class="header">deepak@github ---------------------------------------------</text>
+  <text x="340" y="45" class="head">deepak@github ---------------------------------------</text>
+  <text x="340" y="70" class="key">OS:<tspan x="490" class="val">. . . . . . . Windows 11, iOS 26, Linux</tspan></text>
+  <text x="340" y="90" class="key">Uptime:<tspan x="490" class="val">. . . . . . . . . 20 years, 6 months</tspan></text>
+  <text x="340" y="110" class="key">Host:<tspan x="490" class="val">. . . . . . . . . Mahindra University</tspan></text>
+  <text x="340" y="130" class="key">Kernel:<tspan x="490" class="val">. . . BTech AI (Class of 2027)</tspan></text>
+  <text x="340" y="150" class="key">IDE:<tspan x="490" class="val">. . . . . . . . . . . VSCode, Cursor</tspan></text>
   
-  <text x="400" y="44" class="key">OS:<tspan x="540" class="value">. . . Windows 11, iOS 26, Linux</tspan></text>
-  <text x="400" y="68" class="key">Uptime:<tspan x="540" class="value">. . . . . . . . 20 years, 6 months</tspan></text>
-  <text x="400" y="92" class="key">Host:<tspan x="540" class="value">. . . . . . . Mahindra University</tspan></text>
-  <text x="400" y="116" class="key">Kernel:<tspan x="540" class="value">. . BTech AI (Class of 2027)</tspan></text>
-  <text x="400" y="140" class="key">IDE:<tspan x="540" class="value">. . . . . . . . VSCode, Cursor</tspan></text>
+  <text x="340" y="185" class="key">Languages.Programming:<tspan x="510" class="val">. JS, TS, HTML, CSS, C++</tspan></text>
+  <text x="340" y="205" class="key">Languages.Computer:<tspan x="510" class="val">. . Next.js, Express, SQL</tspan></text>
+  <text x="340" y="225" class="key">Languages.Real:<tspan x="510" class="val">. . . English, Hindi, Telugu</tspan></text>
   
-  <text x="400" y="172" class="header">-----------------------------------------------------------</text>
-  
-  <text x="400" y="196" class="key">Languages.Programming:<tspan x="540" class="value">. JS, TS, HTML, CSS, C++</tspan></text>
-  <text x="400" y="220" class="key">Languages.Computer:<tspan x="540" class="value">. . . Next.js, Express, SQL</tspan></text>
-  <text x="400" y="244" class="key">Languages.Real:<tspan x="540" class="value">. . . English, Hindi, Telugu</tspan></text>
-  
-  <text x="400" y="276" class="header">-----------------------------------------------------------</text>
+  <text x="340" y="260" class="key">Hobbies.Software:<tspan x="490" class="val">. . Full-stack, Machine Learning</tspan></text>
+  <text x="340" y="280" class="key">Hobbies.Design:<tspan x="490" class="val">. . . . Photoshop, Illustr, Figma</tspan></text>
+  <text x="340" y="300" class="key">Hobbies.Other:<tspan x="490" class="val">. . . . . . . Football, Minecraft</tspan></text>
 
-  <text x="400" y="300" class="key">Hobbies.Software:<tspan x="540" class="value">. Full-stack, Machine Learning</tspan></text>
-  <text x="400" y="324" class="key">Hobbies.Design:<tspan x="540" class="value">. . . Photoshop, Illustr, Figma</tspan></text>
-  <text x="400" y="348" class="key">Hobbies.Other:<tspan x="540" class="value">. . . . Football, Minecraft</tspan></text>
+  <text x="340" y="335" class="head">- Contact -------------------------------------------</text>
+  <text x="340" y="360" class="key">Email.Personal:<tspan x="490" class="val">. . . . deepakrdy7@gmail.com</tspan></text>
+  <text x="340" y="380" class="key">LinkedIn:<tspan x="490" class="val">. . . . . . . . . . deepakaeleni</tspan></text>
+  <text x="340" y="400" class="key">Discord:<tspan x="490" class="val">. . . . . . . . . . . skittlllle</tspan></text>
 
-  <text x="400" y="380" class="header">-----------------------------------------------------------</text>
-
-  <text x="400" y="404" class="key">Email.Personal:<tspan x="540" class="value">. . . deepakrdy7@gmail.com</tspan></text>
-  <text x="400" y="428" class="key">LinkedIn:<tspan x="540" class="value">. . . . . . deepakaeleni</tspan></text>
-  <text x="400" y="452" class="key">Discord:<tspan x="540" class="value">. . . . . . skittlllle</tspan></text>
-
-  <text x="400" y="484" class="header">-----------------------------------------------------------</text>
-
-  <text x="400" y="508" class="key">Repos:<tspan x="460" class="value">45</tspan><tspan x="500" class="key">{Contributed:</tspan><tspan x="610" class="value">23}</tspan><tspan x="640" class="key">Stars:</tspan><tspan x="720" class="value">128</tspan></text>
-  <text x="400" y="532" class="key">Commits:<tspan x="540" class="value">1,024</tspan><tspan x="640" class="key">Followers:</tspan><tspan x="720" class="value">64</tspan></text>
-  <text x="400" y="556" class="key">Lines of Code:<tspan x="540" class="value">446,276 (<tspan class="plus">523,178++</tspan>, <tspan class="minus">76,902--</tspan>)</tspan></text>
-
+  <text x="340" y="435" class="head">- GitHub Stats --------------------------------------</text>
+  <text x="340" y="460" class="key">Repos:<tspan x="400" class="val">45</tspan> <tspan x="435" class="key">Contributed:</tspan><tspan x="535" class="val">23</tspan> <tspan x="570" class="key">Stars:</tspan><tspan x="640" class="val">128</tspan></text>
+  <text x="340" y="480" class="key">Commits:<tspan x="460" class="val">1,024</tspan> <tspan x="540" class="key">Followers:</tspan><tspan x="640" class="val">64</tspan></text>
+  <text x="340" y="500" class="key">Lines of Code:<tspan x="460" class="val">446,276 (<tspan class="plus">523,178++</tspan>, <tspan class="minus">76,902--</tspan>)</tspan></text>
 </svg>
