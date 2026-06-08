@@ -1,69 +1,57 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<svg xmlns="http://www.w3.org/2000/svg" font-family="ConsolasFallback,Consolas,monospace" width="985px" height="530px" font-size="16px">
-<style>
-@font-face {
-src: local('Consolas'), local('Consolas Bold');
-font-family: 'ConsolasFallback';
-font-display: swap;
--webkit-size-adjust: 109%;
-size-adjust: 109%;
-}
-.key {fill: #ffa657;}
-.value {fill: #a5d6ff;}
-.addColor {fill: #3fb950;}
-.delColor {fill: #f85149;}
-.cc {fill: #616e7f;}
-text, tspan {white-space: pre;}
-</style>
-<rect width="985px" height="530px" fill="#161b22" rx="15"/>
-<text x="15" y="30" fill="#c9d1d9" class="ascii" xml:space="preserve">
-<tspan x="15" y="30">           .  .        _       .        </tspan>
-<tspan x="15" y="50">        .       .     /        .        </tspan>
-<tspan x="15" y="70">     .       .     .       .      .     </tspan>
-<tspan x="15" y="90">   .       .     .       .              </tspan>
-<tspan x="15" y="110">  .      _@@_ .._      .                </tspan>
-<tspan x="15" y="130">  .     _@@@@@@@u@O@0O@U@O@@@@\         </tspan>
-<tspan x="15" y="150">       |@@^~~~"~~""""^~""~""~@!         </tspan>
-<tspan x="15" y="170">  .    _."    .      _..    _.          </tspan>
-<tspan x="15" y="190">       .  .       @@'      @@@\ @@@     </tspan>
-<tspan x="15" y="210">/@@@^ @@@_ @|____@@@@@|   |@@@@@        </tspan>
-<tspan x="15" y="230"> \@@ \@@@@@@@@@@^"""""@@@@@@@^          </tspan>
-<tspan x="15" y="250">       ::|        _ _ |@@|::            </tspan>
-<tspan x="15" y="270">       ..:@@@____@@@@@:..   _           </tspan>
-<tspan x="15" y="290">         . ::::@@@@@@@::::  / )         </tspan>
-<tspan x="15" y="310">  . .      . . . . . . . ._/__/         </tspan>
-<tspan x="15" y="330">. .      :@O::., .        _@@|          </tspan>
-<tspan x="15" y="350">     .   :@@@@@@@@@_@@@@@@@@@@| :       </tspan>
-<tspan x="15" y="370">         '@@@@@@@@@@@@@@@@@@@@@ :   ::: </tspan>
-<tspan x="15" y="390">           'O@@@@@@@@@@@@@@@@O'   :   :::</tspan>
-<tspan x="15" y="410"> |   |..  :.:::'~@@@@@@@~'::::.::|::| : </tspan>
-<tspan x="15" y="430">:|   |::|||||::::..    ..::::|::||   |||</tspan>
-<tspan x="15" y="450">:|   |::|||||::::..    ..::::|::||   |||</tspan>
-</text>
-<text x="390" y="30" fill="#c9d1d9" xml:space="preserve">
-<tspan x="390" y="30">skittlegit@github</tspan> -——————————————————————————————————————————-—-
-<tspan x="390" y="50" class="cc">. </tspan><tspan class="key">OS</tspan>:<tspan class="cc"> ............................ </tspan><tspan class="value">Windows 11, iOS 26, Linux</tspan>
-<tspan x="390" y="70" class="cc">. </tspan><tspan class="key">Uptime</tspan>:<tspan class="cc" id="age_data_dots"> ............................... </tspan><tspan class="value" id="age_data">20 years, 6 months</tspan>
-<tspan x="390" y="90" class="cc">. </tspan><tspan class="key">Host</tspan>:<tspan class="cc"> ................................ </tspan><tspan class="value">Mahindra University</tspan>
-<tspan x="390" y="110" class="cc">. </tspan><tspan class="key">Kernel</tspan>:<tspan class="cc"> ......................... </tspan><tspan class="value">BTech AI (Class of 2027)</tspan>
-<tspan x="390" y="130" class="cc">. </tspan><tspan class="key">IDE</tspan>:<tspan class="cc"> ...................................... </tspan><tspan class="value">VSCode, Cursor</tspan>
-<tspan x="390" y="150" class="cc">. </tspan>
-<tspan x="390" y="170" class="cc">. </tspan><tspan class="key">Languages</tspan>.<tspan class="key">Programming</tspan>:<tspan class="cc"> ............ </tspan><tspan class="value">JS, TS, HTML, CSS, C++</tspan>
-<tspan x="390" y="190" class="cc">. </tspan><tspan class="key">Languages</tspan>.<tspan class="key">Computer</tspan>:<tspan class="cc"> ................ </tspan><tspan class="value">Next.js, Express, SQL</tspan>
-<tspan x="390" y="210" class="cc">. </tspan><tspan class="key">Languages</tspan>.<tspan class="key">Real</tspan>:<tspan class="cc"> ................... </tspan><tspan class="value">English, Hindi, Telugu</tspan>
-<tspan x="390" y="230" class="cc">. </tspan>
-<tspan x="390" y="250" class="cc">. </tspan><tspan class="key">Hobbies</tspan>.<tspan class="key">Software</tspan>:<tspan class="cc"> ........... </tspan><tspan class="value">Full-stack, Machine Learning</tspan>
-<tspan x="390" y="270" class="cc">. </tspan><tspan class="key">Hobbies</tspan>.<tspan class="key">Design</tspan>:<tspan class="cc"> ................ </tspan><tspan class="value">Photoshop, Illustr, Figma</tspan>
-<tspan x="390" y="290" class="cc">. </tspan><tspan class="key">Hobbies</tspan>.<tspan class="key">Other</tspan>:<tspan class="cc"> ....................... </tspan><tspan class="value">Football, Minecraft</tspan>
-<tspan x="390" y="310" class="cc">. </tspan>
-<tspan x="390" y="330">- Contact</tspan> -—————————————————————————————————————————————-—-
-<tspan x="390" y="350" class="cc">. </tspan><tspan class="key">Email</tspan>.<tspan class="key">Personal</tspan>:<tspan class="cc"> ..................... </tspan><tspan class="value">deepakrdy7@gmail.com</tspan>
-<tspan x="390" y="370" class="cc">. </tspan><tspan class="key">LinkedIn</tspan>:<tspan class="cc"> ................................... </tspan><tspan class="value">deepakaeleni</tspan>
-<tspan x="390" y="390" class="cc">. </tspan><tspan class="key">Discord</tspan>:<tspan class="cc"> ...................................... </tspan><tspan class="value">skittlllle</tspan>
-<tspan x="390" y="410" class="cc">. </tspan>
-<tspan x="390" y="430">- GitHub Stats</tspan> -————————————————————————————————————————-—-
-<tspan x="390" y="450" class="cc">. </tspan><tspan class="key">Repos</tspan>:<tspan class="cc" id="repo_data_dots"> .... </tspan><tspan class="value" id="repo_data">21</tspan> {<tspan class="key">Contributed</tspan>: <tspan class="value" id="contrib_data">26</tspan>} | <tspan class="key">Stars</tspan>:<tspan class="cc" id="star_data_dots"> ............. </tspan><tspan class="value" id="star_data">0</tspan>
-<tspan x="390" y="470" class="cc">. </tspan><tspan class="key">Commits</tspan>:<tspan class="cc" id="commit_data_dots"> ................... </tspan><tspan class="value" id="commit_data">477</tspan> | <tspan class="key">Followers</tspan>:<tspan class="cc" id="follower_data_dots"> ........ </tspan><tspan class="value" id="follower_data">14</tspan>
-<tspan x="390" y="490" class="cc">. </tspan><tspan class="key">Lines of Code on GitHub</tspan>:<tspan class="cc" id="loc_data_dots">. </tspan><tspan class="value" id="loc_data">232,423</tspan> ( <tspan class="addColor" id="loc_add">647,863</tspan><tspan class="addColor">++</tspan>, <tspan id="loc_del_dots"></tspan><tspan class="delColor" id="loc_del">415,440</tspan><tspan class="delColor">--</tspan> )
-</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="985" height="530" viewBox="0 0 985 530" font-family="'SF Mono', 'Fira Code', 'JetBrains Mono', ui-monospace, monospace">
+  <rect x="0" y="0" width="985" height="530" rx="10" fill="#0d1117"/>
+
+  <!-- window header -->
+  <rect x="0" y="0" width="985" height="40" rx="10" fill="#161b22"/>
+  <rect x="0" y="26" width="985" height="14" fill="#161b22"/>
+  <rect x="0" y="40" width="985" height="1" fill="#21262d"/>
+  <circle cx="26" cy="20" r="6" fill="#484f58"/>
+  <circle cx="46" cy="20" r="6" fill="#484f58"/>
+  <circle cx="66" cy="20" r="6" fill="#484f58"/>
+  <text x="492" y="25" font-size="12" fill="#6e7681" text-anchor="middle">github / skittlegit</text>
+
+  <!-- identity -->
+  <text x="44" y="88" font-size="23" font-weight="bold" fill="#e6edf3">Deepak Reddy</text>
+  <text x="44" y="114" font-size="13" fill="#8b949e">BTech AI student &#8212; building full-stack &amp; ML products.</text>
+
+  <rect x="44" y="136" width="897" height="1" fill="#21262d"/>
+
+  <!-- stats -->
+  <text x="44" y="174" font-size="14" fill="#8b949e">age</text>
+  <text x="240" y="174" font-size="14" fill="#e6edf3" id="age_data">20 years, 7 months, 22 days</text>
+
+  <text x="44" y="208" font-size="14" fill="#8b949e">commits</text>
+  <text x="240" y="208" font-size="14" fill="#e6edf3" id="commit_data">477</text>
+
+  <text x="44" y="242" font-size="14" fill="#8b949e">stars</text>
+  <text x="240" y="242" font-size="14" fill="#e6edf3" id="star_data">0</text>
+
+  <text x="44" y="276" font-size="14" fill="#8b949e">repos</text>
+  <text x="240" y="276" font-size="14" fill="#e6edf3" id="repo_data">21</text>
+
+  <text x="44" y="310" font-size="14" fill="#8b949e">contributed</text>
+  <text x="240" y="310" font-size="14" fill="#e6edf3" id="contrib_data">26</text>
+
+  <text x="44" y="344" font-size="14" fill="#8b949e">followers</text>
+  <text x="240" y="344" font-size="14" fill="#e6edf3" id="follower_data">14</text>
+
+  <rect x="44" y="366" width="897" height="1" fill="#21262d"/>
+
+  <!-- lines of code -->
+  <text x="44" y="404" font-size="14" font-weight="bold" fill="#3fb950">++</text>
+  <text x="240" y="404" font-size="14" fill="#e6edf3" id="loc_add">647,863</text>
+
+  <text x="44" y="438" font-size="14" font-weight="bold" fill="#f85149">--</text>
+  <text x="240" y="438" font-size="14" fill="#e6edf3" id="loc_del">415,440</text>
+
+  <text x="44" y="472" font-size="14" fill="#8b949e">net</text>
+  <text x="240" y="472" font-size="14" fill="#e6edf3" id="loc_data">232,423</text>
+
+  <rect x="44" y="494" width="897" height="1" fill="#21262d"/>
+
+  <!-- footer -->
+  <text x="44" y="518" font-size="12" xml:space="preserve"><tspan fill="#8b949e">github.com/skittlegit</tspan><tspan fill="#30363d">   &#183;   </tspan><tspan fill="#8b949e">linkedin.com/in/deepakaeleni</tspan><tspan fill="#30363d">   &#183;   </tspan><tspan fill="#8b949e">deepakrdy7@gmail.com</tspan></text>
+
+  <rect x="0.5" y="0.5" width="984" height="529" rx="10" fill="none" stroke="#30363d" stroke-width="1"/>
 </svg>
