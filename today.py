@@ -333,7 +333,27 @@ def svg_overwrite(filename, age_data, commit_data, star_data, repo_data, contrib
     justify_format(root, 'loc_data', loc_data[2], 9)
     justify_format(root, 'loc_add', loc_data[0])
     justify_format(root, 'loc_del', loc_data[1], 7)
+    update_loc_bar(root, loc_data[0], loc_data[1])
     tree.write(filename, encoding='utf-8', xml_declaration=True)
+
+
+def update_loc_bar(root, add_str, del_str, bar_width=865):
+    """
+    Resizes the 'added' segment of the lines-of-code bar to reflect the
+    added:deleted ratio. The red track underneath is full width, so the
+    remaining width reads as the 'removed' portion. Guarded so a parsing
+    issue can never break the SVG write.
+    """
+    try:
+        add_n = int(str(add_str).replace(',', '').strip())
+        del_n = int(str(del_str).replace(',', '').strip())
+    except (ValueError, TypeError):
+        return
+    total = add_n + del_n
+    add_w = 0 if total == 0 else max(0, min(bar_width, round(bar_width * add_n / total)))
+    element = root.find(".//*[@id='loc_add_bar']")
+    if element is not None:
+        element.set('width', str(add_w))
 
 
 def justify_format(root, element_id, new_text, length=0):
