@@ -12,7 +12,7 @@ import hashlib
 # Issues and pull requests permissions not needed at the moment, but may be used in the future
 HEADERS = {'authorization': 'token '+ os.environ.get('ACCESS_TOKEN', '')}
 USER_NAME = os.environ.get('USER_NAME', 'skittlegit') 
-QUERY_COUNT = {'user_getter': 0, 'follower_getter': 0, 'graph_repos_stars': 0, 'recursive_loc': 0, 'graph_commits': 0, 'loc_query': 0}
+QUERY_COUNT = {'user_getter': 0, 'follower_getter': 0, 'graph_repos_stars': 0, 'recursive_loc': 0, 'graph_commits': 0, 'loc_query': 0, 'contribution_graph': 0}
 
 
 def daily_readme(birthday):
@@ -318,7 +318,7 @@ def stars_counter(data):
     return total_stars
 
 
-def svg_overwrite(filename, age_data, commit_data, star_data, repo_data, contrib_data, follower_data, loc_data):
+def svg_overwrite(filename, age_data, commit_data, star_data, repo_data, contrib_data, follower_data, loc_data, contrib_total=0, contrib_weeks=None):
     """
     Parse SVG files and update elements with age, commits, stars, repositories, and lines written
     """
@@ -334,7 +334,71 @@ def svg_overwrite(filename, age_data, commit_data, star_data, repo_data, contrib
     justify_format(root, 'loc_add', loc_data[0])
     justify_format(root, 'loc_del', loc_data[1], 7)
     update_loc_bar(root, loc_data[0], loc_data[1])
+    find_and_replace(root, 'contrib_year', '{:,}'.format(contrib_total) if isinstance(contrib_total, int) else str(contrib_total))
+    build_contrib_graph(root, contrib_weeks or [], dark='dark' in os.path.basename(filename))
     tree.write(filename, encoding='utf-8', xml_declaration=True)
+
+
+SVG_NS = 'http://www.w3.org/2000/svg'
+CONTRIB_LEVELS = {'NONE': 0, 'FIRST_QUARTILE': 1, 'SECOND_QUARTILE': 2, 'THIRD_QUARTILE': 3, 'FOURTH_QUARTILE': 4}
+CONTRIB_SCALE_DARK = ['#161b22', '#0e4429', '#006d32', '#26a641', '#39d353']
+CONTRIB_SCALE_LIGHT = ['#ebedf0', '#9be9a8', '#40c463', '#30a14e', '#216e39']
+
+
+def build_contrib_graph(root, weeks, dark=True, cell=10, pitch=13):
+    """
+    (Re)draws the contribution heatmap inside the <g id="contrib_graph"> element:
+    one rounded square per day, coloured by contribution level. Guarded so a
+    malformed response can never break the SVG write.
+    """
+    group = root.find(".//*[@id='contrib_graph']")
+    if group is None:
+        return
+    for child in list(group):
+        group.remove(child)
+    scale = CONTRIB_SCALE_DARK if dark else CONTRIB_SCALE_LIGHT
+    try:
+        for x, week in enumerate(weeks):
+            for day in week.get('contributionDays', []):
+                level = CONTRIB_LEVELS.get(day.get('contributionLevel', 'NONE'), 0)
+                weekday = day.get('weekday', 0)
+                rect = etree.SubElement(group, '{%s}rect' % SVG_NS)
+                rect.set('x', str(x * pitch))
+                rect.set('y', str(weekday * pitch))
+                rect.set('width', str(cell))
+                rect.set('height', str(cell))
+                rect.set('rx', '2')
+                rect.set('ry', '2')
+                rect.set('fill', scale[level])
+    except (TypeError, AttributeError, KeyError):
+        return
+
+
+def contribution_graph(username):
+    """
+    Uses GitHub's GraphQL v4 API to return the last year's contribution
+    calendar: the total count and the per-day levels used to draw the heatmap.
+    """
+    query_count('contribution_graph')
+    query = '''
+    query($login: String!) {
+        user(login: $login) {
+            contributionsCollection {
+                contributionCalendar {
+                    totalContributions
+                    weeks {
+                        contributionDays {
+                            contributionLevel
+                            weekday
+                        }
+                    }
+                }
+            }
+        }
+    }'''
+    request = simple_request(contribution_graph.__name__, query, {'login': username})
+    calendar = request.json()['data']['user']['contributionsCollection']['contributionCalendar']
+    return calendar['totalContributions'], calendar['weeks']
 
 
 def update_loc_bar(root, add_str, del_str, bar_width=865):
@@ -478,15 +542,17 @@ if __name__ == '__main__':
     repo_data, repo_time = perf_counter(graph_repos_stars, 'repos', ['OWNER'])
     contrib_data, contrib_time = perf_counter(graph_repos_stars, 'repos', ['OWNER', 'COLLABORATOR', 'ORGANIZATION_MEMBER'])
     follower_data, follower_time = perf_counter(follower_getter, USER_NAME)
+    contrib_graph_data, contrib_graph_time = perf_counter(contribution_graph, USER_NAME)
+    contrib_total, contrib_weeks = contrib_graph_data
 
-    # Note: Removed the add_archive() block here as it relies on a specific local file 
+    # Note: Removed the add_archive() block here as it relies on a specific local file
     # (cache/repository_archive.txt) from the original author's machine which would throw a FileNotFoundError.
 
     for index in range(len(total_loc)-1): 
         total_loc[index] = '{:,}'.format(total_loc[index]) 
 
-    svg_overwrite('dark-mode.svg', age_data, commit_data, star_data, repo_data, contrib_data, follower_data, total_loc[:-1])
-    svg_overwrite('light-mode.svg', age_data, commit_data, star_data, repo_data, contrib_data, follower_data, total_loc[:-1])
+    svg_overwrite('dark-mode.svg', age_data, commit_data, star_data, repo_data, contrib_data, follower_data, total_loc[:-1], contrib_total, contrib_weeks)
+    svg_overwrite('light-mode.svg', age_data, commit_data, star_data, repo_data, contrib_data, follower_data, total_loc[:-1], contrib_total, contrib_weeks)
 
     print('\033[F\033[F\033[F\033[F\033[F\033[F\033[F\033[F',
         '{:<21}'.format('Total function time:'), '{:>11}'.format('%.4f' % (user_time + age_time + loc_time + commit_time + star_time + repo_time + contrib_time)),
