@@ -1,3 +1,3 @@
-requests
-python-dateutil
-lxml
+lxml>=6.1,<7
+python-dateutil>=2.9,<3
+requests>=2.34,<3

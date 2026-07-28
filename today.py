@@ -10,8 +10,12 @@ import hashlib
 # Account permissions: read:Followers, read:Starring, read:Watching
 # Repository permissions: read:Commit statuses, read:Contents, read:Issues, read:Metadata, read:Pull Requests
 # Issues and pull requests permissions not needed at the moment, but may be used in the future
-HEADERS = {'authorization': 'token '+ os.environ.get('ACCESS_TOKEN', '')}
-USER_NAME = os.environ.get('USER_NAME', 'skittlegit') 
+ACCESS_TOKEN = os.environ.get('ACCESS_TOKEN')
+HEADERS = {'authorization': f'Bearer {ACCESS_TOKEN}'} if ACCESS_TOKEN else {}
+USER_NAME = os.environ.get('USER_NAME', 'skittlegit')
+REQUEST_TIMEOUT_SECONDS = 30
+REQUEST_ATTEMPTS = 3
+RETRYABLE_STATUS_CODES = {429, 500, 502, 503, 504}
 QUERY_COUNT = {'user_getter': 0, 'follower_getter': 0, 'graph_repos_stars': 0, 'recursive_loc': 0, 'graph_commits': 0, 'loc_query': 0, 'contribution_graph': 0}
 
 
@@ -44,10 +48,46 @@ def simple_request(func_name, query, variables):
     """
     Returns a request, or raises an Exception if the response does not succeed.
     """
-    request = requests.post('https://api.github.com/graphql', json={'query': query, 'variables':variables}, headers=HEADERS)
-    if request.status_code == 200:
-        return request
-    raise Exception(func_name, ' has failed with a', request.status_code, request.text, QUERY_COUNT)
+    request = None
+    last_error = None
+
+    for attempt in range(1, REQUEST_ATTEMPTS + 1):
+        try:
+            request = requests.post(
+                'https://api.github.com/graphql',
+                json={'query': query, 'variables': variables},
+                headers=HEADERS,
+                timeout=REQUEST_TIMEOUT_SECONDS,
+            )
+        except requests.RequestException as exc:
+            last_error = exc
+            if attempt == REQUEST_ATTEMPTS:
+                break
+        else:
+            if request.status_code not in RETRYABLE_STATUS_CODES or attempt == REQUEST_ATTEMPTS:
+                break
+
+        time.sleep(2 ** (attempt - 1))
+
+    if request is None:
+        raise RuntimeError(
+            f'{func_name} failed after {REQUEST_ATTEMPTS} attempts: {last_error}'
+        ) from last_error
+
+    if request.status_code != 200:
+        raise RuntimeError(
+            f'{func_name} failed with HTTP {request.status_code}: {request.text}'
+        )
+
+    try:
+        response_data = request.json()
+    except requests.exceptions.JSONDecodeError as exc:
+        raise RuntimeError(f'{func_name} returned invalid JSON') from exc
+
+    if response_data.get('errors'):
+        raise RuntimeError(f"{func_name} returned GraphQL errors: {response_data['errors']}")
+
+    return request
 
 
 def graph_commits(start_date, end_date):
@@ -70,7 +110,7 @@ def graph_commits(start_date, end_date):
     return int(request.json()['data']['user']['contributionsCollection']['contributionCalendar']['totalContributions'])
 
 
-def graph_repos_stars(count_type, owner_affiliation, cursor=None, add_loc=0, del_loc=0):
+def graph_repos_stars(count_type, owner_affiliation, cursor=None, star_total=0):
     """
     Uses GitHub's GraphQL v4 API to return total repository, star, or lines of code count.
     """
@@ -99,11 +139,23 @@ def graph_repos_stars(count_type, owner_affiliation, cursor=None, add_loc=0, del
     }'''
     variables = {'owner_affiliation': owner_affiliation, 'login': USER_NAME, 'cursor': cursor}
     request = simple_request(graph_repos_stars.__name__, query, variables)
-    if request.status_code == 200:
-        if count_type == 'repos':
-            return request.json()['data']['user']['repositories']['totalCount']
-        elif count_type == 'stars':
-            return stars_counter(request.json()['data']['user']['repositories']['edges'])
+    repositories = request.json()['data']['user']['repositories']
+
+    if count_type == 'repos':
+        return repositories['totalCount']
+
+    if count_type != 'stars':
+        raise ValueError(f'Unsupported count type: {count_type}')
+
+    star_total += stars_counter(repositories['edges'])
+    if repositories['pageInfo']['hasNextPage']:
+        return graph_repos_stars(
+            count_type,
+            owner_affiliation,
+            repositories['pageInfo']['endCursor'],
+            star_total,
+        )
+    return star_total
 
 
 def recursive_loc(owner, repo_name, data, cache_comment, addition_total=0, deletion_total=0, my_commits=0, cursor=None):
@@ -144,15 +196,25 @@ def recursive_loc(owner, repo_name, data, cache_comment, addition_total=0, delet
         }
     }'''
     variables = {'repo_name': repo_name, 'owner': owner, 'cursor': cursor}
-    request = requests.post('https://api.github.com/graphql', json={'query': query, 'variables':variables}, headers=HEADERS) 
-    if request.status_code == 200:
-        if request.json()['data']['repository']['defaultBranchRef'] != None: # Only count commits if repo isn't empty
-            return loc_counter_one_repo(owner, repo_name, data, cache_comment, request.json()['data']['repository']['defaultBranchRef']['target']['history'], addition_total, deletion_total, my_commits)
-        else: return 0
-    force_close_file(data, cache_comment) # saves what is currently in the file before this program crashes
-    if request.status_code == 403:
-        raise Exception('Too many requests in a short amount of time!\nYou\'ve hit the non-documented anti-abuse limit!')
-    raise Exception('recursive_loc() has failed with a', request.status_code, request.text, QUERY_COUNT)
+    try:
+        request = simple_request(recursive_loc.__name__, query, variables)
+    except RuntimeError:
+        force_close_file(data, cache_comment)
+        raise
+
+    default_branch = request.json()['data']['repository']['defaultBranchRef']
+    if default_branch is not None:  # Only count commits if repo isn't empty
+        return loc_counter_one_repo(
+            owner,
+            repo_name,
+            data,
+            cache_comment,
+            default_branch['target']['history'],
+            addition_total,
+            deletion_total,
+            my_commits,
+        )
+    return 0
 
 
 def loc_counter_one_repo(owner, repo_name, data, cache_comment, history, addition_total, deletion_total, my_commits):
@@ -171,12 +233,15 @@ def loc_counter_one_repo(owner, repo_name, data, cache_comment, history, additio
     else: return recursive_loc(owner, repo_name, data, cache_comment, addition_total, deletion_total, my_commits, history['pageInfo']['endCursor'])
 
 
-def loc_query(owner_affiliation, comment_size=0, force_cache=False, cursor=None, edges=[]):
+def loc_query(owner_affiliation, comment_size=0, force_cache=False, cursor=None, edges=None):
     """
     Uses GitHub's GraphQL v4 API to query all the repositories accessible (with respect to owner_affiliation)
     Queries 60 repos at a time to prevent 502 timeout errors.
     Returns the total number of lines of code in all repositories
     """
+    if edges is None:
+        edges = []
+
     query_count('loc_query')
     query = '''
     query ($owner_affiliation: [RepositoryAffiliation], $login: String!, $cursor: String) {
@@ -525,6 +590,9 @@ def formatter(query_type, difference, funct_return=False, whitespace=0):
 
 
 if __name__ == '__main__':
+    if not ACCESS_TOKEN:
+        raise RuntimeError('ACCESS_TOKEN is required to query the GitHub GraphQL API')
+
     print('Calculation times:')
     
     user_data, user_time = perf_counter(user_getter, USER_NAME)
@@ -555,7 +623,17 @@ if __name__ == '__main__':
     svg_overwrite('light-mode.svg', age_data, commit_data, star_data, repo_data, contrib_data, follower_data, total_loc[:-1], contrib_total, contrib_weeks)
 
     print('\033[F\033[F\033[F\033[F\033[F\033[F\033[F\033[F',
-        '{:<21}'.format('Total function time:'), '{:>11}'.format('%.4f' % (user_time + age_time + loc_time + commit_time + star_time + repo_time + contrib_time)),
+        '{:<21}'.format('Total function time:'), '{:>11}'.format('%.4f' % (
+            user_time
+            + age_time
+            + loc_time
+            + commit_time
+            + star_time
+            + repo_time
+            + contrib_time
+            + follower_time
+            + contrib_graph_time
+        )),
         ' s \033[E\033[E\033[E\033[E\033[E\033[E\033[E\033[E', sep='')
 
     print('Total GitHub GraphQL API calls:', '{:>3}'.format(sum(QUERY_COUNT.values())))
