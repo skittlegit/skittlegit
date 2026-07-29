@@ -112,18 +112,33 @@ def graph_commits(start_date, end_date):
 
 def graph_repos_stars(count_type, owner_affiliation, cursor=None, star_total=0):
     """
-    Uses GitHub's GraphQL v4 API to return total repository, star, or lines of code count.
+    Uses GitHub's GraphQL v4 API to return total repository or star counts.
     """
     query_count('graph_repos_stars')
+
+    if count_type == 'repos':
+        query = '''
+        query ($owner_affiliation: [RepositoryAffiliation], $login: String!) {
+            user(login: $login) {
+                repositories(ownerAffiliations: $owner_affiliation) {
+                    totalCount
+                }
+            }
+        }'''
+        variables = {'owner_affiliation': owner_affiliation, 'login': USER_NAME}
+        request = simple_request(graph_repos_stars.__name__, query, variables)
+        return request.json()['data']['user']['repositories']['totalCount']
+
+    if count_type != 'stars':
+        raise ValueError(f'Unsupported count type: {count_type}')
+
     query = '''
     query ($owner_affiliation: [RepositoryAffiliation], $login: String!, $cursor: String) {
         user(login: $login) {
             repositories(first: 100, after: $cursor, ownerAffiliations: $owner_affiliation) {
-                totalCount
                 edges {
                     node {
                         ... on Repository {
-                            nameWithOwner
                             stargazers {
                                 totalCount
                             }
@@ -140,12 +155,6 @@ def graph_repos_stars(count_type, owner_affiliation, cursor=None, star_total=0):
     variables = {'owner_affiliation': owner_affiliation, 'login': USER_NAME, 'cursor': cursor}
     request = simple_request(graph_repos_stars.__name__, query, variables)
     repositories = request.json()['data']['user']['repositories']
-
-    if count_type == 'repos':
-        return repositories['totalCount']
-
-    if count_type != 'stars':
-        raise ValueError(f'Unsupported count type: {count_type}')
 
     star_total += stars_counter(repositories['edges'])
     if repositories['pageInfo']['hasNextPage']:
