@@ -139,9 +139,7 @@ def graph_repos_stars(count_type, owner_affiliation, cursor=None, star_total=0):
                 edges {
                     node {
                         ... on Repository {
-                            stargazers {
-                                totalCount
-                            }
+                            stargazerCount
                         }
                     }
                 }
@@ -388,7 +386,7 @@ def stars_counter(data):
     Count total stars in repositories owned by the user
     """
     total_stars = 0
-    for node in data: total_stars += node['node']['stargazers']['totalCount']
+    for node in data: total_stars += node['node']['stargazerCount']
     return total_stars
 
 
